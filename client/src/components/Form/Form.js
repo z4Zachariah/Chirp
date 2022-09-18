@@ -21,7 +21,10 @@ const Form = ({ currentId, setCurrentId }) => {
   const classes = useStyles();
   const user = JSON.parse(localStorage.getItem('profile'));
   const history = useHistory();
-  const apiKey = "AIzaSyD_eHQtygvKJOF5Fcxk43t0bCIy_63P8dg";
+    var config = require('./config');
+
+  const apiKey = config.apiKey;
+
 
   const [locationButton, setLocationbutton] = useState('Add Location');
 
